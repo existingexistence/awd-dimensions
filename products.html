@@ -1,51 +1,192 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Products | Dimensions</title>
-<meta name="description" content="Dimensions everyday technology and accessories.">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-<header class="brand-header container"><a href="index.html" aria-label="Dimensions home"><img class="brand-logo" src="Images/Logos/dimensions-logo.webp" alt="Dimensions logo"></a></header>
-<nav class="nav" aria-label="Main navigation"><div class="nav-inner container">
-<a href="index.html">Home</a><a class="active" href="products.html">Products</a><a href="aboutus.html">About Us</a><a href="contactus.html">Contact Us</a>
-</div></nav>
-<div class="shipping" id="shipping-banner"><span class="shipping-message">🚚 Free worldwide shipping!</span><button class="shipping-close" type="button" aria-label="Close shipping announcement" onclick="document.getElementById('shipping-banner').remove()">×</button></div>
-<main><div class="container">
-<div class="page-title"><h1>Products</h1><p>Browse practical gadgets for everyday life and travel.</p></div>
-<div class="products-layout">
-<aside class="filters" aria-label="Product filters">
-<h2>Filters</h2><strong>Product categories</strong>
-<label><input class="category-filter" type="checkbox" value="fan"> Portable Neck Fans</label>
-<label><input class="category-filter" type="checkbox" value="powerbank"> Power Banks</label>
-<label><input class="category-filter" type="checkbox" value="cable"> Cables</label>
-<label><input class="category-filter" type="checkbox" value="adapter"> Travel Adapter Sets</label>
-<label><input class="category-filter" type="checkbox" value="brick"> Charging Bricks</label>
-<label><input class="category-filter" type="checkbox" value="flashlight"> Flashlights</label>
-<hr><strong>Price (SGD)</strong>
-<label>Min.<input id="min-price" type="number" min="0" step="0.50" placeholder="0"></label>
-<label>Max.<input id="max-price" type="number" min="0" step="0.50" placeholder="50"></label>
-<button class="button filter-button" id="apply-filters" type="button">Apply filters</button>
-<button class="button secondary filter-button" id="clear-filters" type="button">Clear filters</button>
-<p id="filter-status" class="filter-status" aria-live="polite">Showing 6 products</p>
-</aside>
-<section aria-label="Product results">
-<div class="product-grid" id="product-grid">
-<article class="product-card" data-category="fan" data-price="15"><a href="#portable-neck-fan" class="product-link" aria-label="Portable neck fan product"><div class="product-visual"><img src="Images/Products/portable-neck-fan.webp" alt="Portable neck fan"></div><div class="product-info"><h3>Portable Neck Fan</h3><p>Stay comfortable on the move.</p><div class="price">$15.00 SGD</div></div></a></article>
-<article class="product-card" data-category="powerbank" data-price="25"><a href="#power-bank" class="product-link" aria-label="Power bank product"><div class="product-visual"><img src="Images/Products/power-bank.webp" alt="Power bank"></div><div class="product-info"><h3>Power Bank</h3><p>Extra power when you need it.</p><div class="price">$25.00 SGD</div></div></a></article>
-<article class="product-card" data-category="cable" data-price="5"><a href="#cable" class="product-link" aria-label="Cable product"><div class="product-visual"><img src="Images/Products/cable.webp" alt="Purple braided USB charging cable"></div><div class="product-info"><h3>Cable</h3><p>Reliable connections for your devices.</p><div class="price">$5.00 SGD</div></div></a></article>
-<article class="product-card" data-category="adapter" data-price="10"><a href="#travel-adapter-set" class="product-link" aria-label="Travel adapter set product"><div class="product-visual"><img src="Images/Products/travel-adapter-set.webp" alt="Travel adapter set"></div><div class="product-info"><h3>Travel Adapter Set</h3><p>Connect and charge with ease.</p><div class="price">$10.00 SGD</div></div></a></article>
-<article class="product-card" data-category="brick" data-price="20"><a href="#charging-brick" class="product-link" aria-label="Charging brick product"><div class="product-visual"><img src="Images/Products/charging-brick.webp" alt="Charging brick"></div><div class="product-info"><h3>Charging Brick</h3><p>Compact charging for daily use.</p><div class="price">$20.00 SGD</div></div></a></article>
-<article class="product-card" data-category="flashlight" data-price="7.5"><a href="#flashlight" class="product-link" aria-label="Flashlight product"><div class="product-visual"><img src="Images/Products/flashlight.webp" alt="Black flashlight with purple accent"></div><div class="product-info"><h3>Flashlight</h3><p>A handy light for everyday situations.</p><div class="price">$7.50 SGD</div></div></a></article>
-</div></section></div></div></main>
-<footer class="footer"><div class="footer-main container">
-<div><h3>Info</h3><ul><li><a href="aboutus.html">About Us</a></li><li><a href="contactus.html">Contact Us</a></li><li><a href="#">Social Media</a></li></ul></div>
-<div><h3>Support</h3><ul><li><a href="#">Warranty Policy</a></li><li><a href="#">Exchange Policy</a></li><li><a href="#">Support</a></li></ul></div>
-<div><h3>Others</h3><ul><li><a href="#">Feedback</a></li></ul></div>
-</div><div class="footer-bottom container"><div class="copyright">© 2026 Dimensions</div><div class="footer-logo"><img src="Images/Logos/dimensions-logo.webp" alt="Dimensions logo"></div><div class="socials" aria-label="Social media links"><a href="#" aria-label="Facebook"><img src="Images/Logos/facebook.svg" alt="Facebook"></a><a href="#" aria-label="Instagram"><img src="Images/Logos/instagram.svg" alt="Instagram"></a><a href="#" aria-label="YouTube"><img src="Images/Logos/youtube.svg" alt="YouTube"></a><a href="#" aria-label="Twitter"><img src="Images/Logos/twitter.svg" alt="Twitter"></a></div></div></footer>
-<script>
-(() => {
+   <head>
+      <meta charset="utf-8"/>
+      <meta content="width=device-width, initial-scale=1" name="viewport"/>
+      <title>Products | Dimensions</title>
+      <meta content="Dimensions everyday technology and accessories." name="description"/>
+      <link href="style.css" rel="stylesheet"/>
+   </head>
+   <body>
+      <header class="brand-header container">
+         <a aria-label="Dimensions home" href="index.html"><img alt="Dimensions logo" class="brand-logo" src="Images/Logos/dimensions-logo.webp"/></a>
+      </header>
+
+      <nav aria-label="Main navigation" class="nav">
+         <div class="nav-inner container">
+            <a href="index.html">Home</a>
+            <a class="active" href="products.html">Products</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="contactus.html">Contact Us</a>
+         </div>
+      </nav>
+      <div class="shipping" id="shipping-banner">
+         <span class="shipping-message">🚚 Free worldwide shipping!</span>
+         <button aria-label="Close shipping announcement" class="shipping-close" onclick="document.getElementById(&#x27;shipping-banner&#x27;).remove()" type="button">×</button>
+      </div>
+      <main>
+         <div class="container">
+            <div class="page-title">
+               <h1>Products</h1>
+               <p>Browse practical gadgets for everyday life and travel.</p>
+            </div>
+            <div class="products-layout">
+               <aside aria-label="Product filters" class="filters">
+                  <h2>Filters</h2>
+                  <strong>Product categories</strong>
+                  <label><input class="category-filter" type="checkbox" value="fan"/> Portable Neck Fans</label>
+                  <label><input class="category-filter" type="checkbox" value="powerbank"/> Power Banks</label>
+                  <label><input class="category-filter" type="checkbox" value="cable"/> Cables</label>
+                  <label><input class="category-filter" type="checkbox" value="adapter"/> Travel Adapter Sets</label>
+                  <label><input class="category-filter" type="checkbox" value="brick"/> Charging Bricks</label>
+                  <label><input class="category-filter" type="checkbox" value="flashlight"/> Flashlights</label>
+                  <hr/>
+                  <strong>Price (SGD)</strong>
+                  <label>Min. <input id="min-price" min="0" placeholder="0" step="0.50" type="number"/></label>
+                  <label>Max. <input id="max-price" min="0" placeholder="50" step="0.50" type="number"/></label>
+                  <button class="button filter-button" id="apply-filters" type="button">Apply filters</button>
+                  <button class="button secondary filter-button" id="clear-filters" type="button">Clear filters</button>
+                  <p aria-live="polite" class="filter-status" id="filter-status">Showing 6 products</p>
+               </aside>
+               <section aria-label="Product results">
+                  <div class="product-grid" id="product-grid">
+                     <article class="product-card" data-category="fan" data-price="15">
+                        <a aria-label="Portable neck fan product" class="product-link" href="#portable-neck-fan">
+                           <div class="product-visual">
+                              <img alt="Portable neck fan" src="Images/Products/portable-neck-fan.webp"/>
+                           </div>
+                           <div class="product-info">
+                              <h3>Portable Neck Fan</h3>
+                              <p>Stay comfortable on the move.</p>
+                              <div class="price">$15.00 SGD</div>
+                           </div>
+                        </a>
+                     </article>
+
+                     <article class="product-card" data-category="powerbank" data-price="25">
+                        <a aria-label="Power bank product" class="product-link" href="#power-bank">
+                           <div class="product-visual">
+                              <img alt="Power bank" src="Images/Products/power-bank.webp"/>
+                           </div>
+                           <div class="product-info">
+                              <h3>Power Bank</h3>
+                              <p>Extra power when you need it.</p>
+                              <div class="price">$25.00 SGD</div>
+                           </div>
+                        </a>
+                     </article>
+
+                     <article class="product-card" data-category="cable" data-price="5">
+                        <a aria-label="Cable product" class="product-link" href="#cable">
+                           <div class="product-visual">
+                              <img alt="Purple braided USB charging cable" src="Images/Products/cable.webp"/>
+                           </div>
+                           <div class="product-info">
+                              <h3>Cable</h3>
+                              <p>Reliable connections for your devices.</p>
+                              <div class="price">$5.00 SGD</div>
+                           </div>
+                        </a>
+                     </article>
+
+                     <article class="product-card" data-category="adapter" data-price="10">
+                        <a aria-label="Travel adapter set product" class="product-link" href="#travel-adapter-set">
+                           <div class="product-visual">
+                              <img alt="Travel adapter set" src="Images/Products/travel-adapter-set.webp"/>
+                           </div>
+                           <div class="product-info">
+                              <h3>Travel Adapter Set</h3>
+                              <p>Connect and charge with ease.</p>
+                              <div class="price">$10.00 SGD</div>
+                           </div>
+                        </a>
+                     </article>
+
+                     <article class="product-card" data-category="brick" data-price="20">
+                        <a aria-label="Charging brick product" class="product-link" href="#charging-brick">
+                           <div class="product-visual">
+                              <img alt="Charging brick" src="Images/Products/charging-brick.webp"/>
+                           </div>
+                           <div class="product-info">
+                              <h3>Charging Brick</h3>
+                              <p>Compact charging for daily use.</p>
+                              <div class="price">$20.00 SGD</div>
+                           </div>
+                        </a>
+                     </article>
+
+                     <article class="product-card" data-category="flashlight" data-price="7.5">
+                        <a aria-label="Flashlight product" class="product-link" href="#flashlight">
+                           <div class="product-visual">
+                              <img alt="Black flashlight with purple accent" src="Images/Products/flashlight.webp"/>
+                           </div>
+                           <div class="product-info">
+                              <h3>Flashlight</h3>
+                              <p>A handy light for everyday situations.</p>
+                              <div class="price">$7.50 SGD</div>
+                           </div>
+                        </a>
+                     </article>
+                  </div>
+               </section>
+            </div>
+         </div>
+      </main>
+
+      <footer class="footer">
+         <div class="footer-main container">
+            <div>
+               <h3>Info</h3>
+               <ul>
+                  <li>
+                     <a href="aboutus.html">About Us</a>
+                  </li>
+                  <li>
+                     <a href="contactus.html">Contact Us</a>
+                  </li>
+                  <li>
+                     <a href="#">Social Media</a>
+                  </li>
+               </ul>
+            </div>
+            <div>
+               <h3>Support</h3>
+               <ul>
+                  <li>
+                     <a href="#">Warranty Policy</a>
+                  </li>
+                  <li>
+                     <a href="#">Exchange Policy</a>
+                  </li>
+                  <li>
+                     <a href="#">Support</a>
+                  </li>
+               </ul>
+            </div>
+            <div>
+               <h3>Others</h3>
+               <ul>
+                  <li>
+                     <a href="#">Feedback</a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+         <div class="footer-bottom container">
+            <div class="copyright">© 2026 Dimensions</div>
+            <div class="footer-logo">
+               <img alt="Dimensions logo" src="Images/Logos/dimensions-logo.webp"/>
+            </div>
+            <div aria-label="Social media links" class="socials">
+               <a aria-label="Facebook" href="#"><img alt="Facebook" src="Images/Logos/facebook.svg"/></a>
+               <a aria-label="Instagram" href="#"><img alt="Instagram" src="Images/Logos/instagram.svg"/></a>
+               <a aria-label="YouTube" href="#"><img alt="YouTube" src="Images/Logos/youtube.svg"/></a>
+               <a aria-label="Twitter" href="#"><img alt="Twitter" src="Images/Logos/twitter.svg"/></a>
+            </div>
+         </div>
+      </footer>
+      <script>
+   (() => {
  const cards = [...document.querySelectorAll('.product-card')];
  const checks = [...document.querySelectorAll('.category-filter')];
  const minInput = document.getElementById('min-price');
@@ -86,5 +227,6 @@
    status.textContent = 'Showing 6 products';
  });
 })();
-</script>
-</body></html>
+  </script>
+   </body>
+</html>
